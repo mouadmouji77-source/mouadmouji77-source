@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://miro.medium.com/proxy/1*OF0xEMkWBv-69zvmNs6RDQ.gif" alt="banner" width="100%"/>
+  <img src="https://raw.githubusercontent.com/mouadmouji77-source/mouadmouji77-source/main/assets/terminal-banner.svg" alt="terminal banner" width="100%"/>
 </div>
 
 <h1 align="center" style="box-shadow:1px 1px 10px blue">Hi 👋, I'm Mouad Mouji</h1>

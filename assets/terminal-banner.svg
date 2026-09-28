@@ -1,70 +1,163 @@
-<svg width="780" height="340" viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg" font-family="'Fira Code','Consolas',monospace">
+<svg width="780" height="480" viewBox="0 0 780 480" xmlns="http://www.w3.org/2000/svg" font-family="'Fira Code','JetBrains Mono','Consolas','DejaVu Sans Mono',monospace">
+  <!-- =====================================================================
+       TERMINAL ANIMÉ — thème noir / gris / argent (même style que name-3d.svg)
+       Cycle complet : 16 secondes, puis tout recommence.
+       Chaque ligne apparaît à un moment précis grâce à keyTimes (0 → 1 = 0s → 16s)
+       ===================================================================== -->
   <defs>
-    <clipPath id="c1"><rect x="24" y="52" width="0" height="22"><animate attributeName="width" values="0;0;100;100" keyTimes="0;0.02;0.06;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c3"><rect x="24" y="130" width="0" height="22"><animate attributeName="width" values="0;0;150;150" keyTimes="0;0.20;0.24;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c5"><rect x="24" y="182" width="0" height="22"><animate attributeName="width" values="0;0;210;210" keyTimes="0;0.38;0.42;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="c8"><rect x="24" y="260" width="0" height="22"><animate attributeName="width" values="0;0;360;360" keyTimes="0;0.60;0.64;1" dur="14s" repeatCount="indefinite"/></rect></clipPath>
+    <!-- Fond de la fenêtre : noir avec léger dégradé -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="50%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+
+    <!-- Barre de titre : métal brossé -->
+    <linearGradient id="titlebar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="100%" stop-color="#1c1c1c"/>
+    </linearGradient>
+
+    <!-- Bordure : un reflet argenté fait le tour en boucle -->
+    <linearGradient id="border" gradientUnits="userSpaceOnUse" x1="-400" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#2a2a2a"/>
+      <animate attributeName="x1" values="-400;780" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;1180" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Scanline : bande de lumière qui descend (effet vieil écran) -->
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Barre de progression : dégradé argenté -->
+    <linearGradient id="progress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6a6a6a"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Halo blanc léger autour du texte -->
+    <filter id="glow" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Ombre portée de la fenêtre (effet 3D) -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+
+    <!-- Zones de "frappe" : la largeur grandit = les commandes s'écrivent -->
+    <clipPath id="c1"><rect x="24" y="64" width="0" height="24"><animate attributeName="width" values="0;0;120;120;0" keyTimes="0;0.02;0.06;0.94;1" dur="16s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c2"><rect x="24" y="130" width="0" height="24"><animate attributeName="width" values="0;0;160;160;0" keyTimes="0;0.12;0.16;0.94;1" dur="16s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c3"><rect x="24" y="196" width="0" height="24"><animate attributeName="width" values="0;0;230;230;0" keyTimes="0;0.22;0.27;0.94;1" dur="16s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="c4"><rect x="24" y="378" width="0" height="24"><animate attributeName="width" values="0;0;340;340;0" keyTimes="0;0.58;0.64;0.94;1" dur="16s" repeatCount="indefinite"/></rect></clipPath>
   </defs>
 
-  <rect x="1" y="1" width="778" height="338" rx="10" fill="#0d1117" stroke="#30363d"/>
-  <rect x="1" y="1" width="778" height="34" rx="10" fill="#161b22"/>
-  <rect x="1" y="24" width="778" height="12" fill="#161b22"/>
+  <!-- ===================== FENÊTRE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="4" y="4" width="772" height="468" rx="12" fill="url(#bg)"/>
+  </g>
 
-  <circle cx="22" cy="18" r="6" fill="#ff5f56"/>
-  <circle cx="42" cy="18" r="6" fill="#ffbd2e"/>
-  <circle cx="62" cy="18" r="6" fill="#27c93f"/>
-  <text x="390" y="23" fill="#8b949e" font-size="13" text-anchor="middle">mouad@github:~</text>
+  <!-- Grille de fond discrète (esprit data) -->
+  <g stroke="#1f1f1f" stroke-width="1">
+    <line x1="4" y1="120" x2="776" y2="120"/><line x1="4" y1="200" x2="776" y2="200"/>
+    <line x1="4" y1="280" x2="776" y2="280"/><line x1="4" y1="360" x2="776" y2="360"/>
+    <line x1="200" y1="42" x2="200" y2="472"/><line x1="400" y1="42" x2="400" y2="472"/><line x1="600" y1="42" x2="600" y2="472"/>
+  </g>
 
-  <text x="24" y="68" font-size="15" clip-path="url(#c1)">
-    <tspan fill="#58a6ff">$ </tspan><tspan fill="#c9d1d9">whoami</tspan>
-  </text>
-  <text x="24" y="94" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.10;0.11;0.92;1" dur="14s" repeatCount="indefinite"/>
-    Mouad Mouji
-  </text>
+  <!-- Barre de titre -->
+  <path d="M4 16 a12 12 0 0 1 12 -12 h748 a12 12 0 0 1 12 12 v26 h-772 z" fill="url(#titlebar)"/>
+  <line x1="4" y1="42" x2="776" y2="42" stroke="#000" stroke-width="1"/>
 
-  <text x="24" y="146" font-size="15" clip-path="url(#c3)">
-    <tspan fill="#58a6ff">$ </tspan><tspan fill="#c9d1d9">cat role.txt</tspan>
-  </text>
-  <text x="24" y="172" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.28;0.29;0.92;1" dur="14s" repeatCount="indefinite"/>
-    Ingenieur Data &amp; BI | Developpeur Full-Stack
-  </text>
+  <!-- 3 boutons en nuances de gris -->
+  <circle cx="26" cy="23" r="6" fill="#e6e6e6"/>
+  <circle cx="46" cy="23" r="6" fill="#9a9a9a"/>
+  <circle cx="66" cy="23" r="6" fill="#5a5a5a"/>
+  <text x="390" y="28" fill="#bdbdbd" font-size="13" text-anchor="middle" letter-spacing="1">mouad@github: ~</text>
 
-  <text x="24" y="198" font-size="15" clip-path="url(#c5)">
-    <tspan fill="#58a6ff">$ </tspan><tspan fill="#c9d1d9">./deploy_projets.sh</tspan>
-  </text>
-  <text x="24" y="224" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.46;0.47;0.92;1" dur="14s" repeatCount="indefinite"/>
-    ✔ bi
-  </text>
-  <text x="24" y="250" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
-    ✔ edugo_app
-  </text>
-  <text x="24" y="250" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
-    ✔ insta_poster deploye
-  </text>
-  <text x="24" y="250" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
-    ✔  BudgetApp_Android_Flosino
-  </text>
-    <text x="24" y="250" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
-    ✔ Artisant_management deploye
-  </text>
+  <!-- Bordure avec reflet qui tourne -->
+  <rect x="4" y="4" width="772" height="468" rx="12" fill="none" stroke="url(#border)" stroke-width="1.5"/>
 
-  <text x="24" y="276" font-size="15" clip-path="url(#c8)">
-    <tspan fill="#58a6ff">$ </tspan><tspan fill="#c9d1d9">echo "Bienvenue sur mon profil !"</tspan>
-  </text>
-  <text x="24" y="302" font-size="15" fill="#7ee787">
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.68;0.69;0.92;1" dur="14s" repeatCount="indefinite"/>
-    Bienvenue sur mon profil !
-  </text>
+  <!-- ===================== CONTENU ===================== -->
+  <g font-size="15">
 
-  <text x="24" y="326" font-size="15" fill="#58a6ff">$</text>
-  <rect x="40" y="313" width="9" height="16" fill="#c9d1d9">
-    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.25;0.5;0.75;1" dur="1s" repeatCount="indefinite"/>
+    <!-- 1. whoami -->
+    <text x="24" y="80" clip-path="url(#c1)"><tspan fill="#ffffff" font-weight="700">$ </tspan><tspan fill="#bdbdbd">whoami</tspan></text>
+    <text x="24" y="106" fill="#ffffff" font-weight="700" filter="url(#glow)" opacity="0">
+      Mouad Mouji
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.08;0.09;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- 2. cat role.txt -->
+    <text x="24" y="146" clip-path="url(#c2)"><tspan fill="#ffffff" font-weight="700">$ </tspan><tspan fill="#bdbdbd">cat role.txt</tspan></text>
+    <text x="24" y="172" fill="#e6e6e6" filter="url(#glow)" opacity="0">
+      Ingénieur Data &amp; BI  |  Développeur Full-Stack
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.18;0.19;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- 3. deploy_projets.sh -->
+    <text x="24" y="212" clip-path="url(#c3)"><tspan fill="#ffffff" font-weight="700">$ </tspan><tspan fill="#bdbdbd">./deploy_projets.sh</tspan></text>
+
+    <!-- Barre de progression qui se remplit -->
+    <rect x="24" y="226" width="600" height="8" rx="4" fill="#1f1f1f" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.27;0.28;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="226" width="0" height="8" rx="4" fill="url(#progress)" filter="url(#glow)">
+      <animate attributeName="width" values="0;0;600;600;0" keyTimes="0;0.28;0.54;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <text x="640" y="235" fill="#9a9a9a" font-size="13" opacity="0">
+      100%
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.54;0.55;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Projets : un par ligne, chacun à sa propre hauteur (y) et à son propre moment -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.31;0.32;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <text x="24" y="260" fill="#ffffff">✔ <tspan fill="#e6e6e6">bi</tspan></text>
+      <text x="740" y="260" fill="#7a7a7a" font-size="13" text-anchor="end">[ déployé ]</text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.36;0.37;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <text x="24" y="284" fill="#ffffff">✔ <tspan fill="#e6e6e6">edugo_app</tspan></text>
+      <text x="740" y="284" fill="#7a7a7a" font-size="13" text-anchor="end">[ déployé ]</text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.41;0.42;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <text x="24" y="308" fill="#ffffff">✔ <tspan fill="#e6e6e6">insta_poster</tspan></text>
+      <text x="740" y="308" fill="#7a7a7a" font-size="13" text-anchor="end">[ déployé ]</text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.46;0.47;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <text x="24" y="332" fill="#ffffff">✔ <tspan fill="#e6e6e6">BudgetApp_Android_Flosino</tspan></text>
+      <text x="740" y="332" fill="#7a7a7a" font-size="13" text-anchor="end">[ déployé ]</text>
+    </g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.51;0.52;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <text x="24" y="356" fill="#ffffff">✔ <tspan fill="#e6e6e6">Artisant_management</tspan></text>
+      <text x="740" y="356" fill="#7a7a7a" font-size="13" text-anchor="end">[ déployé ]</text>
+    </g>
+
+    <!-- 4. echo -->
+    <text x="24" y="394" clip-path="url(#c4)"><tspan fill="#ffffff" font-weight="700">$ </tspan><tspan fill="#bdbdbd">echo "Bienvenue sur mon profil !"</tspan></text>
+    <text x="24" y="420" fill="#ffffff" font-weight="700" filter="url(#glow)" opacity="0">
+      Bienvenue sur mon profil ! 👋
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.66;0.67;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Invite finale + curseur qui clignote -->
+    <text x="24" y="452" fill="#ffffff" font-weight="700">$</text>
+    <rect x="40" y="439" width="9" height="17" fill="#e6e6e6">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ===================== SCANLINE qui descend ===================== -->
+  <rect x="4" y="42" width="772" height="60" fill="url(#scan)">
+    <animate attributeName="y" values="42;420;42" dur="6s" repeatCount="indefinite"/>
   </rect>
 </svg>

@@ -1,52 +1,111 @@
-<svg width="760" height="150" viewBox="0 0 760 150" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',Arial,sans-serif">
+<svg width="800" height="210" viewBox="0 0 800 210" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',Arial,Helvetica,sans-serif">
   <defs>
-    <linearGradient id="frontGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7ee2ff"/>
-      <stop offset="55%" stop-color="#3aa0ff"/>
-      <stop offset="100%" stop-color="#1f6feb"/>
+    <!-- ===== FOND : noir profond avec un léger dégradé ===== -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0a0a0a"/>
+      <stop offset="50%"  stop-color="#161616"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
     </linearGradient>
-    <linearGradient id="shineGrad" x1="-0.3" y1="0" x2="0.1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8"/>
+
+    <!-- ===== FACE DU NOM : effet chrome / métal argenté ===== -->
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="45%"  stop-color="#d4d4d4"/>
+      <stop offset="50%"  stop-color="#8a8a8a"/>
+      <stop offset="75%"  stop-color="#c8c8c8"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+
+    <!-- ===== REFLET : bande de lumière qui balaie le nom ===== -->
+    <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="-100" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.95"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-      <animate attributeName="x1" values="-0.3;1.3" dur="3.5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0.1;1.7" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="-300;900" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="-100;1100" dur="3.2s" repeatCount="indefinite"/>
     </linearGradient>
-    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="5" dy="10" stdDeviation="7" flood-color="#000000" flood-opacity="0.45"/>
+
+    <!-- ===== LIGNE SOUS LE NOM : gris → blanc → gris ===== -->
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#444" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#444" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- ===== OMBRE PORTÉE (profondeur 3D) ===== -->
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="6" dy="12" stdDeviation="8" flood-color="#000" flood-opacity="0.8"/>
     </filter>
+
+    <!-- ===== HALO doux autour du nom ===== -->
+    <filter id="glow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Le nom, défini une seule fois puis réutilisé avec <use> -->
+    <text id="name" x="400" y="118" font-size="66" font-weight="800" text-anchor="middle" letter-spacing="2">Mouad Mouji</text>
   </defs>
 
-  <!-- flat intro line -->
-  <text x="380" y="34" font-size="22" fill="#8b949e" text-anchor="middle">Hi, I'm</text>
-  <text x="300" y="30" font-size="24" text-anchor="middle" transform-origin="300px 24px">
-    👋
-    <animateTransform attributeName="transform" type="rotate" values="0;20;-12;20;0" dur="1.6s" repeatCount="indefinite"/>
-  </text>
+  <!-- ===== CARTE DE FOND ===== -->
+  <rect width="800" height="210" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="798" height="208" rx="17" fill="none" stroke="#2a2a2a" stroke-width="2"/>
 
-  <!-- extruded 3D name: stacked copies create the depth, gradient cap on top -->
-  <g filter="url(#softShadow)">
-    <g id="extrude" fill="#08213f" font-size="58" font-weight="800" text-anchor="middle">
-      <text x="384.8" y="126.8">Mouad Mouji</text>
-      <text x="384.4" y="126.4">Mouad Mouji</text>
-      <text x="384.0" y="126.0">Mouad Mouji</text>
-      <text x="383.6" y="125.6">Mouad Mouji</text>
-      <text x="383.2" y="125.2">Mouad Mouji</text>
-      <text x="382.8" y="124.8">Mouad Mouji</text>
-      <text x="382.4" y="124.4">Mouad Mouji</text>
-      <text x="382.0" y="124.0">Mouad Mouji</text>
-      <text x="381.6" y="123.6">Mouad Mouji</text>
-      <text x="381.2" y="123.2">Mouad Mouji</text>
-      <text x="380.8" y="122.8">Mouad Mouji</text>
-      <text x="380.4" y="122.4">Mouad Mouji</text>
-    </g>
-    <text x="380" y="122" font-size="58" font-weight="800" text-anchor="middle"
-          fill="url(#frontGrad)" stroke="#bfe6ff" stroke-width="1" paint-order="stroke">
-      Mouad Mouji
-    </text>
-    <text x="380" y="122" font-size="58" font-weight="800" text-anchor="middle"
-          fill="url(#shineGrad)" style="mix-blend-mode:overlay">
-      Mouad Mouji
-    </text>
+  <!-- ===== GRILLE DE POINTS (clin d'œil "data") qui clignote doucement ===== -->
+  <g fill="#3a3a3a">
+    <circle cx="40"  cy="40"  r="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="70"  cy="40"  r="2"><animate attributeName="opacity" values="1;0.2;1"   dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="40"  cy="70"  r="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="192" r="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="745" cy="192" r="2"><animate attributeName="opacity" values="1;0.2;1"   dur="3.3s" repeatCount="indefinite"/></circle>
+    <circle cx="770" cy="167" r="2"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/></circle>
   </g>
+
+  <!-- ===== MINI GRAPHIQUE EN BARRES animé (côté droit, esprit BI) ===== -->
+  <g fill="#5a5a5a" transform="translate(700,30)">
+    <rect x="0"  y="20" width="8" height="30"><animate attributeName="height" values="12;38;22;12" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="38;12;28;38" dur="2.4s" repeatCount="indefinite"/></rect>
+    <rect x="13" y="10" width="8" height="40" fill="#8a8a8a"><animate attributeName="height" values="30;14;42;30" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="20;36;8;20" dur="2.4s" repeatCount="indefinite"/></rect>
+    <rect x="26" y="25" width="8" height="25"><animate attributeName="height" values="20;44;16;20" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="30;6;34;30" dur="2.4s" repeatCount="indefinite"/></rect>
+    <rect x="39" y="5"  width="8" height="45" fill="#bdbdbd"><animate attributeName="height" values="40;24;46;40" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="10;26;4;10" dur="2.4s" repeatCount="indefinite"/></rect>
+  </g>
+
+  <!-- ===== NOM 3D : flotte doucement de haut en bas ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="4s" repeatCount="indefinite"/>
+
+    <g filter="url(#shadow)">
+      <!-- Extrusion : copies empilées, du gris foncé au gris moyen = épaisseur 3D -->
+      <use href="#name" x="7" y="7" fill="#111"/>
+      <use href="#name" x="6" y="6" fill="#1a1a1a"/>
+      <use href="#name" x="5" y="5" fill="#222"/>
+      <use href="#name" x="4" y="4" fill="#2b2b2b"/>
+      <use href="#name" x="3" y="3" fill="#353535"/>
+      <use href="#name" x="2" y="2" fill="#404040"/>
+      <use href="#name" x="1" y="1" fill="#4d4d4d"/>
+
+      <!-- Face avant chrome + contour clair -->
+      <use href="#name" fill="url(#chrome)" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.6"/>
+    </g>
+
+    <!-- Reflet lumineux qui traverse les lettres -->
+    <use href="#name" fill="url(#shine)" filter="url(#glow)"/>
+
+    <!-- Contour qui se "dessine" puis s'efface en boucle -->
+    <use href="#name" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="900" stroke-dashoffset="900" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" values="900;0;0;900" keyTimes="0;0.4;0.7;1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.9;0;0" keyTimes="0;0.6;0.8;1" dur="6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- ===== LIGNE qui s'étire sous le nom ===== -->
+  <rect x="400" y="140" width="0" height="2" fill="url(#line)">
+    <animate attributeName="x"     values="400;180;180;400" keyTimes="0;0.35;0.8;1" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="0;440;440;0"     keyTimes="0;0.35;0.8;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ===== SOUS-TITRE qui apparaît en fondu ===== -->
+  <text x="400" y="175" font-size="18" fill="#a8a8a8" text-anchor="middle" letter-spacing="5" font-weight="600">
+    DATA &amp; BI ENGINEER  ·  DATA ENGINEERING  ·  AI
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="4s" repeatCount="indefinite"/>
+  </text>
 </svg>

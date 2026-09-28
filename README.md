@@ -68,34 +68,7 @@ Data Engineering · Cloud Architecture · Data Pipelines · AI for Data
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=mouadmouji77-source&theme=darkhub&no-frame=true&no-bg=false&margin-w=4&row=1)
 
-<!-- ===================== 🚀 FEATURED PROJECTS ===================== -->
-<h2 align="center">🚀 Featured Projects</h2>
 
-<!-- Chaque carte = une image générée automatiquement à partir de ton repo.
-     Clic sur la carte = ouvre le repo.
-     À remplacer : TON_USERNAME et NOM_DU_REPO_x -->
-
-<p align="center">
-  <!-- Projet 1 : BI Assistant IA -->
-  <a href="https://github.com/TON_USERNAME/NOM_DU_REPO_1">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=TON_USERNAME&repo=NOM_DU_REPO_1&bg_color=0d0d0d&title_color=ffffff&text_color=a8a8a8&icon_color=bdbdbd&border_color=2a2a2a&show_owner=false" width="48%"/>
-  </a>
-  <!-- Projet 2 : Business Intelligence Dashboard -->
-  <a href="https://github.com/TON_USERNAME/NOM_DU_REPO_2">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=TON_USERNAME&repo=NOM_DU_REPO_2&bg_color=0d0d0d&title_color=ffffff&text_color=a8a8a8&icon_color=bdbdbd&border_color=2a2a2a&show_owner=false" width="48%"/>
-  </a>
-</p>
-
-<p align="center">
-  <!-- Projet 3 : Sentiment Analysis -->
-  <a href="https://github.com/TON_USERNAME/NOM_DU_REPO_3">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=TON_USERNAME&repo=NOM_DU_REPO_3&bg_color=0d0d0d&title_color=ffffff&text_color=a8a8a8&icon_color=bdbdbd&border_color=2a2a2a&show_owner=false" width="48%"/>
-  </a>
-  <!-- Projet 4 : autre projet (CareMS, bibliothèque, Instagram bot…) -->
-  <a href="https://github.com/TON_USERNAME/NOM_DU_REPO_4">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=TON_USERNAME&repo=NOM_DU_REPO_4&bg_color=0d0d0d&title_color=ffffff&text_color=a8a8a8&icon_color=bdbdbd&border_color=2a2a2a&show_owner=false" width="48%"/>
-  </a>
-</p>
 
 ## 🐍 Contribution Snake
 ![snake gif](https://raw.githubusercontent.com/mouadmouji77-source/mouadmouji77-source/output/github-snake-dark.svg)

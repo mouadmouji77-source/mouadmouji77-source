@@ -7,8 +7,8 @@
 
 
   # 👋 Hi, I'm Mouad Mouji
+  ---
   
-
 ### Data & BI Engineer | Software Development
 
 🎓 Computer Science & Networks Engineering — MIAGE  

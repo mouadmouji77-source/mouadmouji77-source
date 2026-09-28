@@ -17,12 +17,66 @@
   </a>
 </p>
 
-## 💫 About Me
-- 📊 Je conçois des solutions **Data & Business Intelligence** (analyse, reporting, dashboards).
-- 🌐 Je développe des applications **web Full-Stack** avec **Python / Django**.
-- 🤖 J'aime automatiser des tâches répétitives (bots, scripts, intégrations d'API).
-- 🌱 En apprentissage continu sur la Data Engineering et le Cloud.
-- ✉️ Me contacter : mouadmouji77@gmail.com
+# 👋 Hi, I'm Mouad Mouji
+
+### Data & BI Engineer | Data Engineering | Software Development
+
+🎓 Computer Science & Networks Engineering — MIAGE  
+📍 Rabat, Morocco
+
+I'm interested in **Data Engineering, Business Intelligence, Cloud and AI**.
+
+I enjoy building data-driven applications, dashboards and intelligent tools
+that turn data into useful and actionable information.
+
+---
+
+## 🛠️ Tech Stack
+
+**Data & BI**  
+Python · SQL · PostgreSQL · Power BI · Power Query · DAX
+
+**AI & Data**  
+RAG · LLM · NLP · NLP-to-SQL · pgvector · sentence-transformers
+
+**Cloud**  
+AWS · Azure
+
+**Development**  
+FastAPI · Django · Flask · Java · Spring Boot · C#/.NET · JavaScript
+
+**Tools**  
+Git · GitHub · Docker
+
+---
+
+## 🚀 Featured Projects
+
+### 🤖 BI Assistant IA
+Natural-language BI assistant that converts business questions into SQL queries using **LLM + RAG + PostgreSQL**.
+
+### 📊 Business Intelligence Dashboard
+Interactive Power BI solution with **ETL, data modeling, DAX and KPI analysis**.
+
+### ⚽ Sentiment Analysis
+NLP application analyzing Reddit discussions about La Liga players using **Python, Flask and Spark**.
+
+---
+
+## 🌱 Currently Learning
+
+Data Engineering · Cloud Architecture · Data Pipelines · AI for Data
+
+---
+
+## 📫 Connect with me
+
+📧 **Email:** mouji.mouad.dev@gmail.com  
+💼 **LinkedIn:** [Mouad Mouji](https://www.linkedin.com/in/mouad-mouji/)
+
+---
+
+⭐ Feel free to explore my repositories.
 
 ## 🛠️ Tech Stack
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)

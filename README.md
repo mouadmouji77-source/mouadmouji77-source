@@ -4,14 +4,9 @@
 
 
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mouadmouji77-source&label=Profile%20views&color=2E9EF7&style=flat" alt="profile views" />
-  <a href="https://github.com/mouadmouji77-source?tab=followers">
-    <img src="https://img.shields.io/github/followers/mouadmouji77-source?label=Followers&style=flat&color=2E9EF7" alt="followers" />
-  </a>
-</p>
 
-# 👋 Hi, I'm Mouad Mouji
+
+  # 👋 Hi, I'm Mouad Mouji
 
 ### Data & BI Engineer | Software Development
 

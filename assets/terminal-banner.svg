@@ -36,9 +36,21 @@
   </text>
   <text x="24" y="224" font-size="15" fill="#7ee787">
     <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.46;0.47;0.92;1" dur="14s" repeatCount="indefinite"/>
+    ✔ bi
+  </text>
+  <text x="24" y="250" font-size="15" fill="#7ee787">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
+    ✔ edugo_app
+  </text>
+  <text x="24" y="250" font-size="15" fill="#7ee787">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
     ✔ insta_poster deploye
   </text>
   <text x="24" y="250" font-size="15" fill="#7ee787">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
+    ✔  BudgetApp_Android_Flosino
+  </text>
+    <text x="24" y="250" font-size="15" fill="#7ee787">
     <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.53;0.92;1" dur="14s" repeatCount="indefinite"/>
     ✔ Artisant_management deploye
   </text>

@@ -2,7 +2,9 @@
   <img src="https://raw.githubusercontent.com/mouadmouji77-source/mouadmouji77-source/main/assets/terminal-banner.svg" alt="terminal banner" width="100%"/>
 </div>
 
-<h1 align="center" style="box-shadow:1px 1px 10px blue">Hi 👋, I'm Mouad Mouji</h1>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mouadmouji77-source/mouadmouji77-source/main/assets/name-3d.svg" alt="Mouad Mouji" width="480"/>
+</div>
 
 <div align="center">
   <a href="https://git.io/typing-svg">
@@ -95,13 +97,6 @@ Data Engineering · Cloud Architecture · Data Pipelines · AI for Data
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-
-<!-- Touche 3D : graphe de contributions en relief, genere automatiquement chaque jour -->
-<!-- par le workflow .github/workflows/profile-3d.yml (yoshi389111/github-profile-3d-contrib) -->
-## 🧊 3D Contribution Graph
-<p align="center">
-  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D contribution graph" width="100%" />
-</p>
 
 ## 📊 GitHub Stats
 ![](https://github-readme-stats.vercel.app/api?username=mouadmouji77-source&theme=dark&hide_border=false&include_all_commits=true&count_private=true&show_icons=true)

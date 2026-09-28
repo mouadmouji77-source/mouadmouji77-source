@@ -2,10 +2,6 @@
   <img src="https://raw.githubusercontent.com/mouadmouji77-source/mouadmouji77-source/main/assets/terminal-banner.svg" alt="terminal banner" width="100%"/>
 </div>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/mouadmouji77-source/mouadmouji77-source/main/assets/name-3d.svg" alt="Mouad Mouji" width="480"/>
-</div>
-
 
 
 <p align="center">
